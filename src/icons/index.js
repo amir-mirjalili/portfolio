@@ -40,7 +40,6 @@ import Next from './next';
 import NextConfig from './next-config';
 import NodeModules from './node-modules';
 import NodeJs from './nodejs';
-import Projects from './projects';
 import Public from './public';
 import PublicOpen from './public-open';
 import RadioTower from './radio-tower';
@@ -114,7 +113,6 @@ export {
   NextConfig,
   NodeJs,
   NodeModules,
-  Projects,
   Public,
   PublicOpen,
   RadioTower,
