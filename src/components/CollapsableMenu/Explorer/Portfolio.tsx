@@ -1,8 +1,6 @@
 import { FadeIn, FadeInStagger } from "@/components";
 import {
   AboutMe,
-  App,
-  AppOpen,
   BottomLeftArrow,
   BottomRightArrow,
   ChallengeIcon,
@@ -156,50 +154,50 @@ export default function Portfolio({
               sections={pathname === "/" ? sections : []}
             />
           </Folder>
-          <Folder
-            name="src"
-            openIcon={<SrcOpen />}
-            closedIcon={<Src />}
-            indent={0}
-            segmentActive={false}
-          >
-            <Folder
-              name="leetcode"
-              openIcon={<LibOpen />}
-              closedIcon={<Lib />}
-              indent={1}
-              segmentActive={segments[0] === "leet-code"}
-            >
-              {allLeetcode.map((leetcode) => (
-                <File
-                  key={leetcode.pathname}
-                  name={leetcode.title}
-                  icon={fileType[leetcode.framework]}
-                  url={leetcode.pathname}
-                  indent={2}
-                  sections={pathname === leetcode.pathname ? sections : []}
-                />
-              ))}
-            </Folder>
-            <Folder
-              name="resume"
-              openIcon={<LibOpen />}
-              closedIcon={<Lib />}
-              indent={1}
-              segmentActive={segments[0] === "leet-code"}
-            >
-              {allApps.map((allApp) => (
-                <File
-                  key="resulme"
-                  name="resulme"
-                  icon={fileType[allApp.framework]}
-                  url="resulme"
-                  indent={2}
-                  sections={pathname === allApp.pathname ? sections : []}
-                />
-              ))}
-            </Folder>
-          </Folder>
+          {/*<Folder*/}
+          {/*  name="src"*/}
+          {/*  openIcon={<SrcOpen />}*/}
+          {/*  closedIcon={<Src />}*/}
+          {/*  indent={0}*/}
+          {/*  segmentActive={false}*/}
+          {/*>*/}
+          {/*  <Folder*/}
+          {/*    name="leetcode"*/}
+          {/*    openIcon={<LibOpen />}*/}
+          {/*    closedIcon={<Lib />}*/}
+          {/*    indent={1}*/}
+          {/*    segmentActive={segments[0] === "leet-code"}*/}
+          {/*  >*/}
+          {/*    {allLeetcode.map((leetcode) => (*/}
+          {/*      <File*/}
+          {/*        key={leetcode.pathname}*/}
+          {/*        name={leetcode.title}*/}
+          {/*        icon={fileType[leetcode.framework]}*/}
+          {/*        url={leetcode.pathname}*/}
+          {/*        indent={2}*/}
+          {/*        sections={pathname === leetcode.pathname ? sections : []}*/}
+          {/*      />*/}
+          {/*    ))}*/}
+          {/*  </Folder>*/}
+          {/*  <Folder*/}
+          {/*    name="resume"*/}
+          {/*    openIcon={<LibOpen />}*/}
+          {/*    closedIcon={<Lib />}*/}
+          {/*    indent={1}*/}
+          {/*    segmentActive={segments[0] === "leet-code"}*/}
+          {/*  >*/}
+          {/*    {allApps.map((allApp) => (*/}
+          {/*      <File*/}
+          {/*        key="resulme"*/}
+          {/*        name="resulme"*/}
+          {/*        icon={fileType[allApp.framework]}*/}
+          {/*        url="resulme"*/}
+          {/*        indent={2}*/}
+          {/*        sections={pathname === allApp.pathname ? sections : []}*/}
+          {/*      />*/}
+          {/*    ))}*/}
+          {/*  </Folder>*/}
+          {/*</Folder>*/}
           {staticFiles.map((file) => (
             <File
               key={file.name}

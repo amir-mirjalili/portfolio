@@ -1,6 +1,6 @@
-import { FadeIn, GlowCard, SectionHeader, Socials, Stars } from '@/components';
-import { Accounts } from '@/icons';
-import Image from 'next/image';
+import { FadeIn, GlowCard, SectionHeader, Socials, Stars } from "@/components";
+import { Accounts } from "@/icons";
+import Image from "next/image";
 
 export default function AboutMe() {
   return (
@@ -15,7 +15,9 @@ export default function AboutMe() {
         title="About Me"
         description={
           <div>
-            I&apos;m a <span className="text-about_me_green">software engineer</span> specialized on <span className="text-about_me_green">Back-end</span>
+            I&apos;m a{" "}
+            <span className="text-about_me_green">software engineer</span>{" "}
+            specialized on <span className="text-about_me_green">Back-end</span>
           </div>
         }
       />
@@ -23,13 +25,29 @@ export default function AboutMe() {
       <div className="@container">
         <div className="flex flex-col gap-8 mt-24 @lg:flex-row justify-between">
           <div className="max-w-xl flex-auto">
-            <h3 className="text-lg font-semibold leading-8 tracking-tight text-white">Amirmohammad Mirjalili</h3>
-            <p className="text-base leading-7 text-about_me_green">Software Engineer</p>
-            <p className="mt-4 text-lg text-gray-500">I&apos;m an experienced software engineer who constantly seeks out innovative solutions to everyday problems.</p>
-            <p className="mt-4 text-lg text-gray-500">After {new Date().getFullYear()-2019} years in this industry I have worked with multiple back-end technologies.</p>
+            <h3 className="text-lg font-semibold leading-8 tracking-tight text-white">
+              Amirmohammad Mirjalili
+            </h3>
+            <p className="text-base leading-7 text-about_me_green">
+              Software Engineer
+            </p>
+            <p className="mt-4 text-lg text-gray-500">
+              I&apos;m an experienced software engineer who constantly seeks out
+              innovative solutions to everyday problems.
+            </p>
+            <p className="mt-4 text-lg text-gray-500">
+              After {new Date().getFullYear() - 2019} years in this industry I
+              have worked with multiple back-end technologies.
+            </p>
           </div>
           <div className="flex-none mx-auto">
-            <Image className="rounded-full object-cover" src="/me.jpg" alt="" height={208} width={208} />
+            <Image
+              className="rounded-full object-cover"
+              src="/me.jpg"
+              alt=""
+              height={208}
+              width={208}
+            />
           </div>
         </div>
         <div className="@container">
@@ -45,34 +63,36 @@ export default function AboutMe() {
                 <div className="border-y py-2 border-gray-500/30 mb-6">
                   <div className="flex flex-wrap gap-x-6">
                     <div className="text-lg font-bold leading-9 tracking-tight flex gap-1">
-                      <p className="text-white">Persian</p> - <p className="text-gray-500">Native</p>
+                      <p className="text-white">Persian</p> -{" "}
+                      <p className="text-gray-500">Native</p>
                     </div>
                     <div className="text-lg font-bold leading-9 tracking-tight flex gap-1">
-                      <p className="text-white">English</p> - <p className="text-gray-500">Advanced</p>
+                      <p className="text-white">English</p> -{" "}
+                      <p className="text-gray-500">Advanced</p>
                     </div>
                   </div>
                 </div>
               </FadeIn>
               <Socials />
             </div>
-            <FadeIn
-              variants={{
-                hidden: { opacity: 0, x: 20 },
-                visible: { opacity: 1, x: 0 },
-              }}
-            >
-              <GlowCard className="hover:shadow-about_me_green/90" glowClassName="from-[#6bc072] to-[#6bc072]">
-                <div className="flex flex-col gap-8 @lg:flex-row justify-between">
-                  <div className="flex-none mx-auto self-center">
-                    <Image className="rounded-2xl object-fill" src="/tec.jpeg" alt="" width={144} height={144} />
-                  </div>
-                  <div className="max-w-xl flex-auto">
-                    <h3 className="text-lg font-semibold leading-8 tracking-tight text-white">B.S. in Computer Science and Technology</h3>
-                    <p className="text-base leading-7 text-about_me_green">Imam ALi University</p>
-                  </div>
-                </div>
-              </GlowCard>
-            </FadeIn>
+            {/*<FadeIn*/}
+            {/*  variants={{*/}
+            {/*    hidden: { opacity: 0, x: 20 },*/}
+            {/*    visible: { opacity: 1, x: 0 },*/}
+            {/*  }}*/}
+            {/*>*/}
+            {/*<GlowCard className="hover:shadow-about_me_green/90" glowClassName="from-[#6bc072] to-[#6bc072]">*/}
+            {/*  <div className="flex flex-col gap-8 @lg:flex-row justify-between">*/}
+            {/*    <div className="flex-none mx-auto self-center">*/}
+            {/*      <Image className="rounded-2xl object-fill" src="/tec.jpeg" alt="" width={144} height={144} />*/}
+            {/*    </div>*/}
+            {/*    <div className="max-w-xl flex-auto">*/}
+            {/*      <h3 className="text-lg font-semibold leading-8 tracking-tight text-white">B.S. in Computer Science and Technology</h3>*/}
+            {/*      <p className="text-base leading-7 text-about_me_green">Imam ALi University</p>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</GlowCard>*/}
+            {/*</FadeIn>*/}
           </div>
         </div>
       </div>

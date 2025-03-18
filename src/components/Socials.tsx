@@ -1,9 +1,9 @@
-'use client';
-import { Button, FadeIn, FadeInStagger } from '@/components';
-import clsx from 'clsx';
-import Link from 'next/link';
+"use client";
+import { Button, FadeIn, FadeInStagger } from "@/components";
+import clsx from "clsx";
+import Link from "next/link";
 
-function LinkedinIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function LinkedinIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"></path>
@@ -11,7 +11,7 @@ function LinkedinIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
-function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function GitHubIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
@@ -24,22 +24,48 @@ function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const socialMediaProfiles = [
-  { title: 'Linkedin', href: 'https://www.linkedin.com/in/jalejandrogomeze/', icon: LinkedinIcon },
-  { title: 'GitHub', href: 'https://github.com/AlejandroGomezE', icon: GitHubIcon },
+  {
+    title: "Linkedin",
+    href: "https://www.linkedin.com/in/amirmirjalili/",
+    icon: LinkedinIcon,
+  },
+  {
+    title: "GitHub",
+    href: "https://github.com/amir-mirjalili",
+    icon: GitHubIcon,
+  },
 ];
 
-export default function Socials({ className }: { className?: string; invert?: boolean }) {
+export default function Socials({
+  className,
+}: {
+  className?: string;
+  invert?: boolean;
+}) {
   return (
-    <FadeInStagger role="list" className={clsx('flex gap-x-4 text-white mt-5', className)}>
+    <FadeInStagger
+      role="list"
+      className={clsx("flex gap-x-4 text-white mt-5", className)}
+    >
       {socialMediaProfiles.map((socialMediaProfile) => (
         <FadeIn key={socialMediaProfile.title}>
-          <Link href={socialMediaProfile.href} target="_blank" aria-label={socialMediaProfile.title} className="transition hover:text-white/80 duration-200">
+          <Link
+            href={socialMediaProfile.href}
+            target="_blank"
+            aria-label={socialMediaProfile.title}
+            className="transition hover:text-white/80 duration-200"
+          >
             <socialMediaProfile.icon className="h-6 w-6 fill-current" />
           </Link>
         </FadeIn>
       ))}
       <FadeIn>
-        <Button className="flex items-center gap-x-2" href="/#contact" variant="secondary" arrow="right">
+        <Button
+          className="flex items-center gap-x-2"
+          href="/#contact"
+          variant="secondary"
+          arrow="right"
+        >
           Contact Me
         </Button>
       </FadeIn>

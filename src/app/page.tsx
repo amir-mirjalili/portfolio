@@ -1,19 +1,31 @@
-import { AboutMe, AnimatedTitle, Border, ContactForm, Container, FadeIn, GridPattern, Section, SectionHeader, Skills, Socials, Stars, WorkExperience } from '@/components';
-import { Archive, BookOpen, BriefCase, Envelope } from '@/icons';
+import {
+  AboutMe,
+  AnimatedTitle,
+  Border,
+  ContactForm,
+  Container,
+  FadeIn,
+  GridPattern,
+  Section,
+  SectionHeader,
+  Skills,
+  Socials,
+  Stars,
+  WorkExperience,
+} from "@/components";
+import { Archive, BookOpen, BriefCase, Envelope } from "@/icons";
 
 export const metadata = {
-  title: 'Amirmohammad Mirjalili',
-  description: 'My personal portfolio.',
+  title: "Amirmohammad Mirjalili",
+  description: "My personal portfolio.",
 };
 
-
-
 export const sections = [
-  { index: 0, title: 'About Me', id: 'about-me' },
-  { index: 1, title: 'Work Experience', id: 'work-experience' },
-  { index: 2, title: 'Skills', id: 'skills' },
-  { index: 3, title: 'My Work', id: 'my-work' },
-  { index: 4, title: 'Contact Me', id: 'contact' },
+  { index: 0, title: "About Me", id: "about-me" },
+  { index: 1, title: "Work Experience", id: "work-experience" },
+  { index: 2, title: "Skills", id: "skills" },
+  { index: 3, title: "My Work", id: "my-work" },
+  { index: 4, title: "Contact Me", id: "contact" },
 ];
 
 interface contentSection {
@@ -36,10 +48,15 @@ const content: contentSection[] = [
           <span className="bg-work_experience_orange icon-blur absolute inset-0 -z-10"></span>
         </>
       ),
-      title: 'Work Experience',
+      title: "Work Experience",
       description: (
         <div>
-          <span className="text-work_experience_orange">Software Engineer</span> with <span className="text-work_experience_orange">{new Date().getFullYear()-2019} years</span> of experience in the software industry
+          <span className="text-work_experience_orange">Software Engineer</span>{" "}
+          with{" "}
+          <span className="text-work_experience_orange">
+            {new Date().getFullYear() - 2019} years
+          </span>{" "}
+          of experience in the software industry
         </div>
       ),
     },
@@ -54,7 +71,7 @@ const content: contentSection[] = [
           <span className="bg-skills_purple icon-blur absolute inset-0 -z-10"></span>
         </>
       ),
-      title: 'Skills',
+      title: "Skills",
       description: (
         <div>
           <span className="text-skills_purple">Back-End</span> technologies
@@ -72,10 +89,11 @@ const content: contentSection[] = [
           <span className="bg-blue-400 icon-blur absolute inset-0 -z-10"></span>
         </>
       ),
-      title: 'Contact Me',
+      title: "Contact Me",
       description: (
         <div>
-          Get in <span className="text-blue-400">contact</span> and let&apos;s <span className="text-blue-400">work together</span>
+          Get in <span className="text-blue-400">contact</span> and let&apos;s{" "}
+          <span className="text-blue-400">work together</span>
         </div>
       ),
     },
@@ -94,7 +112,10 @@ export default function Index() {
               <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] sm:text-6xl">
                 Amirmohammad Mirjalili<span className="wave">👋</span>
               </h1>
-              <p className="max-w-3xl">{new Date().getFullYear()-2000} yo software engineer with a B.S. in Computer Science and Technology with experience in Front-End and Back-End technologies.</p>
+              <p className="max-w-3xl mt-2">
+                {new Date().getFullYear() - 2000} years old software engineer
+                with experience Back-End technologies.
+              </p>
             </FadeIn>
 
             <Socials />
@@ -103,7 +124,7 @@ export default function Index() {
               <span></span>
               <span></span>
             </div>
-          </div>{' '}
+          </div>{" "}
           <Border />
           <AboutMe />
         </Container>
